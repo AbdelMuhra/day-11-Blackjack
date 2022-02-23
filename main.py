@@ -26,5 +26,5 @@ if input("Do you want to play a game of Blackjack? ('y'|'n')? ") == 'y':
   user_score = sum(user_cards)
   computer_cards = [random.choice(cards),random.choice(cards)]
   computer_score = sum(computer_cards)
-  print(f"your cards are: {user_cards}. current_score: {user_score}")
-  print(f"computer cards are: {computer_cards}. current_score: {computer_score}")
+  print(f"your cards are: {user_cards}. current score: {user_score}")
+  print(f"computer's first card is: {computer_cards[0]}")
