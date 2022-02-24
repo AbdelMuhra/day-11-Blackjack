@@ -30,16 +30,24 @@ game_on = True
 while game_on:
   if user_score == 21:
     game_on = False
-    print(f"You Won by BlackJack😎")
+    print(f"your final cards are: {user_cards}. final score: {user_score}")
+    print(f"computer's final cards are: {computer_cards}")
+    print(f"You Won by Blackjack😎")
   elif computer_score == 21:
     game_on = False
-    print(f"You Lost, computer won by BlackJack")
+    print(f"your final cards are: {user_cards}. final score: {user_score}")
+    print(f"computer's final cards are: {computer_cards}")
+    print(f"You Lost, computer won by Blackjack😭")
   elif user_score > 21:
     game_on = False
-    print(f"You Lost, you went over.")
+    print(f"your final cards are: {user_cards}. final score: {user_score}")
+    print(f"computer's final cards are: {computer_cards}")
+    print(f"You Lost, you went over😬")
   elif computer_score > 21:
     game_on = False
-    print(f"You Won, computer went over.")
+    print(f"your final cards are: {user_cards}. final score: {user_score}")
+    print(f"computer's final cards are: {computer_cards}")
+    print(f"You Won, computer went over😭")
   else:
     if input("Do you want to play a game of Blackjack? ('y'|'n')? ") == 'y':
       clear()
@@ -56,7 +64,6 @@ while game_on:
       elif computer_score < 18:
         computer_cards.append(random.choice(cards))
         computer_score = sum(computer_cards)
+        
       print(f"your cards are: {user_cards}. current score: {user_score}")
       print(f"computer's first card is: {computer_cards[0]}")
-
-
